@@ -17,7 +17,6 @@ class Animal {
 }
 
 class Donkey extends Animal {
-    @Override
     void sound() {
         System.out.println("Donkey makes sounds");
     }
