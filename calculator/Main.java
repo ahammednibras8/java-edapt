@@ -8,6 +8,8 @@ public class Main {
         @SuppressWarnings("resource")
         Scanner number = new Scanner(System.in);
 
+        Calculation calculator = new Calculation();
+
         System.out.println("Enter First Number: ");
         int num1 = number.nextInt();
 
@@ -25,19 +27,19 @@ public class Main {
 
         switch (choice) {
             case 1:
-                result = calculation.add(num1, num2);
+                result = calculator.add(num1, num2);
                 break;
             
             case 2:
-                result = calculation.substract(num1, num2);
+                result = calculator.substract(num1, num2);
                 break;
             
             case 3:
-                result = calculation.multiply(num1, num2);
+                result = calculator.multiply(num1, num2);
                 break;
             
             case 4:
-                result = calculation.divide(num1, num2);
+                result = calculator.divide(num1, num2);
                 break;
             default:
                 System.out.println("Try Again.");
@@ -48,20 +50,20 @@ public class Main {
     }
 }
 
-class calculation {
-    static int add(int a, int b) {
+class Calculation {
+    int add(int a, int b) {
         return a + b;
     }
 
-    static int substract(int a, int b) {
+    int substract(int a, int b) {
         return a - b;
     }
 
-    static int multiply(int a, int b) {
+    int multiply(int a, int b) {
         return a * b;
     }
 
-    static int divide(int a, int b) {
+    int divide(int a, int b) {
         return a / b;
     }
 }
